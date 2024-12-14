@@ -16,14 +16,23 @@
 
 "size: XS":
   - size-below: 10
+  - size-above: 0
+
 "size: S":
-  - size-above: 10
   - size-below: 30
+  - size-above: 10
+  - all: ["!size: XS"]
+
 "size: M":
-  - size-above: 30
   - size-below: 100
+  - size-above: 30
+  - all: ["!size: XS", "!size: S"]
+
 "size: L":
-  - size-above: 100
   - size-below: 500
+  - size-above: 100
+  - all: ["!size: XS", "!size: S", "!size: M"]
+
 "size: XL":
   - size-above: 500
+  - all: ["!size: XS", "!size: S", "!size: M", "!size: L"]
